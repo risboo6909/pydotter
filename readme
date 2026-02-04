@@ -74,11 +74,21 @@ If you downloaded the source code, you will need Python 3 and pygame (see requir
 
 If you want to start the game from sources follow the instructions below.
 
+Quick start (recommended):
+
+make run
+
+This will create a virtual environment (.venv), install dependencies, and launch the game.
+
 Under Ubuntu these packages can be simply installed by typing:
 
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+
+Then run:
+
+make run
 
 Under Windows, you will have to download and install them manually.
 
