@@ -1,0 +1,124 @@
+# Python Dotter v1.0.0 (rc2)
+
+![Dotter gameplay demo](dotter.gif)
+
+by Boris Tatarintsev
+
+
+Introduction
+------------------
+
+Python Dotter is a remake of one very addictive game for Android/iOS devices called Dotter. The first time I've seen that game on my HTC Desire I was 
+really excited about its gameplay and spent about 3-4 hours playing it and trying to improve my own score. Not that long ago I've decided to
+develop a free open source version of it using Python and pyGame. I hope you will like this game. Please, don't hesitate to write me 
+your opinions and/or suggestions to my e-mail at ttyv00@gmail.com
+
+
+Important
+-----------------
+
+I am neither artist nor musician and I can only maintain and improve code part of the project, but certainly, very important part of any game is art and 
+sounds. I can't handle those things alone, therefor I would be GREATLY appreciated to anyone who can help me to make better art and sounds for the game. 
+Another thing is testing. Although I tried to catch as many bugs as possible, I'm sure that there are a lot of them left alive. If you found one, feel free
+to add them into the google code issues page at http://code.google.com/p/pydotter/issues/list or mail me directly to ttyv00@gmail.com
+
+Thanks for help!
+
+
+Whats new
+-----------------
+
+In this version (rc2) many collision bugs were fixed. Collision system works very stable and precise now.
+
+However the main feature of this version is server leaderboards so you can play it and see the global scores of other players. 
+Unfortunatelly global leadearboards work under windows only (you should start the .exe file). I've made this intentionally to avoid scores cheating by changing the source code.
+I think I will invent something to make the source code version to be able to safely access global scores in one of the next releases.
+Anyway even when running from the sources you can see the global scores but unable to participate in it.
+
+Please note, that there is no waiting screen during getting scores from server and sending scores to the server, so it may seem that the game hangs for a little time after entering a name
+or trying to get the global leaderboards. Don't worry it is normal behaviour and don't try to interrupt this proccess. 
+The server I've found is free of charge PHP hosting therefor it doesn't work very fast. But it is better than nothing.
+
+You can always disable global leaderboards by setting ServerScores variable to False in settings.cfg
+
+Code was refactored a little bit now it should be easier to read and understand it (however it is still far away from ideal).
+
+and other minor improvements...
+ 
+
+TODO
+-----------------
+
+- Replay
+- Menu system improvements
+- Bugfixez
+- Refactoring
+
+Modifications
+-----------------
+
+If you played the original game on mobile devices you should know that it's a little monotonous, that's why I've decided to add some features to deversify
+the gameplay. One of these features is 'Survival Mode', where player is restricted by 30 seconds (initially) to place a new particle. The time to think is 
+reducing each time player reaches some score so the game becomes harder and harder. The aim of this mode is to survive and get as much score points as 
+possible.
+
+Player can stop the game any moment during the gameplay if he thinks that there is no chance to add a new particle without further collisions, 
+score points will be counted anyway.
+
+Another thing is that there are 2 kinds of particles. The big and the small ones (instead of only small ones in the original game). This makes the game
+a little more challanging and interesting because they appear in random order.
+
+I would be glad to hear any opinions about this.
+
+
+How to start
+-----------------
+
+If you downloaded the source code, you will need Python 3 and pygame (see requirements.txt).
+
+If you want to start the game from sources follow the instructions below.
+
+Quick start (recommended):
+
+make run
+
+This will create a virtual environment (.venv), install dependencies, and launch the game.
+
+Under Ubuntu these packages can be simply installed by typing:
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+Then run:
+
+make run
+
+Under Windows, you will have to download and install them manually.
+
+If everything is ready just start
+
+./run_linux.sh if you are under Linux
+or run_windows.cmd if you are using Windows
+
+If you experience problems running the game from one of the batch files then you should go to the 'src' folder and execute main.py from there.
+
+
+
+If you use Windows you can download the binaries and run the pydotter.exe file located in the 'bin' folder.
+
+Game rules
+----------------
+
+The best way to understand the rules is just to play it a little bit. :)
+
+Try to avoid particles collisions! You should place them as accurate as possible :). Pay your attention to the direction arrow which shows in what 
+direction next particle will move. You have only 3 tries but you can stop the game anytime you think it is enough. 
+If any collision happens it can initiate further collisions between particles. The more 
+particles involved in collisions the more points you lose, so be careful. It is fairly easy to get 1500 points, but it is hard to get 3000.
+
+If you are good enough in 'Standart Mode' you should check out 'Survival Mode' for more challanging gameplay.
+
+see Instruction in the main menu for more info.
+
+Good luck!
